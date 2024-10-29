@@ -1,0 +1,99 @@
+/* Estilos del laberinto */
+/* Estilos del laberinto */
+/* Estilos del laberinto */
+#laberinto {
+    width: 600px; /* Aumentar el ancho del laberinto */
+    height: 500px;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* Cambiar a 12 columnas */
+    gap: 0px;
+    position: relative; /* Para que el cursor siga al laberinto */
+}
+
+/* Resto de los estilos del laberinto */
+.camino, .pared, .inicio, .meta {
+    width: 100%;
+    height: 100%;
+}
+
+.camino {
+    background-image: url(suelo2.jpg);
+    background-color: #444; /* Color para el camino */
+    background-size: 50px 50px; /* Tamaño de la imagen de fondo */
+}
+
+.pared {
+    background-image: url(pared2.jpg);
+    background-color: #ff6f61; /* Color para la pared */
+    background-size: 32px 32px; /* Tamaño de la imagen de fondo */
+}
+
+.inicio {
+    
+    background-color: #61ff6f; /* Verde claro para indicar el inicio */
+}
+
+.meta {
+    background-image: url(salida.jpg);
+    background-color: #ffdf61; /* Amarillo claro para la meta */
+}
+
+/* Estilos del screamer */
+.screamer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.screamer img {
+    width: 100vw; /* Ancho completo de la pantalla */
+    height: 100vh; /* Alto completo de la pantalla */
+    object-fit: cover; /* Escala la imagen para cubrir toda el área sin distorsionarse */
+}
+
+
+/* Estilos de victoria */
+.victoria {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffdf61;
+    padding: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    z-index: 1000;
+    border-radius: 10px;
+}
+
+
+.cursor {
+    position: fixed;
+    width: 16px; /* Ancho del cursor */
+    height: 16px; /* Alto del cursor */
+    background-image: url('cursor-image.png'); /* Ruta de la imagen */
+    background-size: contain; /* Ajusta la imagen al tamaño de 16x16 */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    border-radius: 50%; /* Opcional: mantiene un contorno circular */
+    pointer-events: none; /* Evita que interfiera con clics */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    display: none; /* Inicialmente oculto */
+}
+
+
+/* Oculta el cursor predeterminado */
+#laberinto, #laberinto .camino, #laberinto .pared, #laberinto .inicio, #laberinto .meta {
+    cursor: none; /* Oculta el cursor predeterminado */
+}
+
+
