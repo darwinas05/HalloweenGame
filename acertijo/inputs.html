@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="acertijo.css">
+    <link href="https://fonts.cdnfonts.com/css/horror" rel="stylesheet">
+                
+                
+    <title>Resultado</title>
+</head>
+<body>
+
+    <h1>Juego de Halloween</h1>
+    <h2>Introduce las 4 palabras:</h2>
+    <input type="text" id="wordInput1" placeholder="Palabra 1">
+    <input type="text" id="wordInput2" placeholder="Palabra 2">
+    <input type="text" id="wordInput3" placeholder="Palabra 3">
+    <input type="text" id="wordInput4" placeholder="Palabra 4">
+    <button class="button" onclick="verificarContraseña()">Verificar</button>
+    
+    <div class="mensaje" id="mensajeExito">¡Has resuelto el acertijo!</div>
+    <img class="imagen" id="imagenExito" src="jallowin.png" alt="Imagen de Halloween" width="300">
+
+    <script>
+        function verificarContraseña() {
+            const palabra1 = document.getElementById('wordInput1').value.trim();
+            const palabra2 = document.getElementById('wordInput2').value.trim();
+            const palabra3 = document.getElementById('wordInput3').value.trim();
+            const palabra4 = document.getElementById('wordInput4').value.trim();
+
+            // MODIFICAR PALABRAS CLAVE AL GUSTO DE LOS SEÑORES
+            const palabrasCorrectas = ["ca", "la", "ba", "za"]; 
+            const mensajeExito = document.getElementById('mensajeExito');
+            const imagenExito = document.getElementById('imagenExito');
+
+            if (palabra1 === palabrasCorrectas[0] && 
+                palabra2 === palabrasCorrectas[1] && 
+                palabra3 === palabrasCorrectas[2] && 
+                palabra4 === palabrasCorrectas[3]) {
+                
+                mensajeExito.style.display = 'block'; 
+                imagenExito.style.display = 'block'; 
+                
+            } else {
+                mensajeExito.style.display = 'none'; 
+                imagenExito.style.display = 'none';
+                alert("Inténtalo de nuevo.");
+            }
+        }
+    </script>
+</body>
+</html>
