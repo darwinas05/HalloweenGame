@@ -23,18 +23,18 @@ body {
 .conteiner{
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    padding-top: 220px; /* espacio para que la imagen no se superponga con el header */
+    height: 500px;
+    padding-top: 8px; /* espacio para que la imagen no se superponga con el header */
     padding-bottom: 520px;
     align-items: center;
 }
 
 /*++++++++++++++++++++++++*/
 /* Estilos del encabezado*/
-.titulo {
-    padding: 1rem;
-    text-align: center;
-}
+    .titulo {
+        padding: 1rem;
+        text-align: center;
+    }
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -85,17 +85,19 @@ nav ul li a:hover {
 /* Estilo para la imagen */
 .img {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     /* Espacio entre la imagen y el texto */
     gap: 20px; 
     text-align: center;
     max-width: 90%;
+    margin-top: 50px;
 }
 
 .img img {
     display: block;
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
 }
 
@@ -110,6 +112,12 @@ nav ul li a:hover {
 }
 .juego {
     width: 100%;
-    height: calc(100vh - 60px); /* Altura total menos el espacio reservado para header y footer */
+    height: calc(100vh - 70px); /* Altura total menos el espacio reservado para header y footer */
 }
 
+.huntingGame{
+    width: 100%;               /* Ajusta el ancho a un 90% del contenedor */
+    max-width: 1000px;        /* Establece un ancho máximo para grandes pantallas */
+    height: 110vh;             /* Ajusta la altura al 80% del viewport */
+    border: none;      
+}
