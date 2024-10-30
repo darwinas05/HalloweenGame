@@ -7,8 +7,20 @@ body {
     padding: 20px;
     background-image: url('fondo-halloween.jpg');
     background-size: cover;
+    
 }
-
+/* background: rgb(63, 94, 251);
+  background: radial-gradient(
+    circle,
+    rgb(37, 43, 71) 0%,
+    rgba(3, 3, 3, 0.97) 100%
+  );
+    font-family: 'Rock Salt', cursive;
+    color: rgb(247, 18, 18);
+    letter-spacing: 0.5em;
+    font-size: 18px;
+    font-weight: 10px;
+    text-shadow: 2px 2px 5px black;*/
 h1 {
     font-size: 5em;
     color: orange;
