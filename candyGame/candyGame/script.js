@@ -83,22 +83,28 @@ function updateScoreDisplay() {
 function checkGameOver() {
     if (score <= -10) {
         endGame("¡Has Perdido!");
-    } else if (score >= 60) {
-        endGame("¡Juego Completado!");
+    } else if (score >= 35) {
+        endGame("¡Juego Completado! La palabra es BRUJA");
     }
 }
 
 // Mostrar mensaje y detener el juego
 function endGame(message) {
     clearInterval(candyIntervalId); // Detener el juego
-    loseImage.classList.add("visible"); // Mostrar la imagen de pérdida
-    messageDisplay.textContent = message; // Mostrar el mensaje
+    
+    if (message === "¡Has Perdido!") {
+        messageDisplay.textContent = "Vuelve a Intentarlo"; // Mensaje personalizado para pérdida
+    } else {
+        messageDisplay.textContent = message; // Otro mensaje en caso de ganar
+    }
+    
     messageDisplay.classList.remove("hidden"); // Hacer visible el mensaje
     backgroundAudio.pause(); // Detener el audio de fondo
     loseAudio.currentTime = 0; // Reiniciar el audio de pérdida
     loseAudio.play(); // Reproducir el audio de pérdida
     gameArea.style.pointerEvents = "none"; // Deshabilitar eventos de puntero
 }
+
 
 
 // Iniciar el juego
