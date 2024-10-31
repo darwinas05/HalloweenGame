@@ -90,5 +90,5 @@ body, html {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    z-index: 1000; /* Asegúrate de que esté por encima del resto del contenido */
+    z-index: 1000;
 }

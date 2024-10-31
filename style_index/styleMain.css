@@ -121,3 +121,7 @@ nav ul li a:hover {
     height: 110vh;             /* Ajusta la altura al 80% del viewport */
     border: none;      
 }
+.juegoFlapp{
+    width: 200%;    
+    height: 500px;
+}
