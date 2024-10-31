@@ -7,7 +7,7 @@ let segundoResultado = null;
 let movimientos = 0;
 let aciertos = 0;
 let temporizador = false;
-let timer = 30;
+let timer = 60;
 let timerInicial = timer;
 
 // Apuntando a documento HTML
