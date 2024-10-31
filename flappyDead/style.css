@@ -38,6 +38,7 @@ body {
     background-color: #5F2121;
     border: 2px solid black;
     display: block;
+    position: relative;
     margin: auto;
     height: 100dvh;
 }

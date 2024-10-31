@@ -7,13 +7,14 @@ let segundoResultado = null;
 let movimientos = 0;
 let aciertos = 0;
 let temporizador = false;
-let timer = 60;
+let timer = 45;
 let timerInicial = timer;
 
 // Apuntando a documento HTML
 let mostrarMovimientos = document.getElementById('movimientos');
 let mostrarAciertos = document.getElementById('aciertos');
 let mostrarTiempo = document.getElementById('t_restante');
+let mostrarPalabra = document.getElementById('Palabra');
 
 // Inicializa el contador de jumpscares
 let contadorJumpscare = 0;
@@ -119,6 +120,7 @@ function destapar(id) {
                 mostrarAciertos.innerHTML = `Aciertos: ${aciertos} 👍`;
                 mostrarTiempo.innerHTML = `Increíble, solo tardaste ${timerInicial - timer}"`;
                 mostrarMovimientos.innerHTML = `Movimientos: ${movimientos} 🎃`;
+                mostrarPalabra.innerHTML = `Palabra clave: vampiro`;
                 //mostrarVideoFinal();
             }
         } else {
